@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authorization</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="warning-field">Не все поля заполнены</div>
+      <div class="page-container">
+        <div class="authorization-field">
+          <ul class="control-buttons">
+            <li>
+              <button type="button" id="authorization">Вход</button>
+            </li>
+            <li>
+              <button type="button" id="registration">Регистрация</button>
+            </li>
+          </ul>
+          <form>
+            <div id="lineChoice" class="line-choice"></div>
+            <div id="authorizationFields" class="userFields">
+              <label for="login">Логин</label>
+              <input id="login" type="text" placeholder="Логин / Email" />
+
+              <label for="password">Пароль</label>
+              <input id="password" type="password" placeholder="Пароль" />
+
+              <button
+                id="authorizationButton"
+                class="authorization-button"
+                type="submit"
+              >
+                Войти
+              </button>
+            </div>
+
+            <div id="registrationFields">
+              <div id="identificationFields" class="identification-fields">
+                <label for="name">Имя</label>
+                <input
+                  id="name"
+                  type="text"
+                  data-validate="name"
+                  placeholder="Имя"
+                />
+
+                <div class="line"></div>
+
+                <label for="serName">Фамилия</label>
+                <input
+                  id="serName"
+                  type="text"
+                  data-validate="serName"
+                  placeholder="Фамилия"
+                />
+
+                <div class="line"></div>
+
+                <label for="namberPhone">Телефон</label>
+                <input
+                  id="namberPhone"
+                  type="tel"
+                  pattern="\+?\d{10,15}"
+                  placeholder="+79877489860"
+                />
+
+                <div class="line"></div>
+
+                <label for="medicalInstitutions">Медучреждение</label>
+                <input
+                  id="medicalInstitutions"
+                  type="text"
+                  data-validate="medicalInstitutions"
+                  placeholder="Медучреждение"
+                />
+
+                <div class="line"></div>
+
+                <div class="transizion-container"></div>
+                <button
+                  id="transitionButton"
+                  class="transition-button"
+                  type="submit"
+                >
+                  Далее
+                </button>
+              </div>
+              <div id="loginPasswordFields" class="loginPassword-fields">
+                <label for="email">Эл. почта</label>
+                <input id="email" type="email" placeholder="Email" />
+
+                <div class="line"></div>
+
+                <label for="loginNew">Логин</label>
+                <input id="loginNew" type="text" placeholder="Логин" />
+
+                <div class="line"></div>
+
+                <label for="passwordNew">Пароль</label>
+                <input id="passwordNew" type="password" placeholder="Пароль" />
+
+                <div class="line"></div>
+
+                <label for="passwordNewAgain">Повторите пароль</label>
+                <input
+                  id="passwordNewAgain"
+                  type="password"
+                  placeholder="Пароль"
+                />
+
+                <div class="line"></div>
+
+                <div
+                  id="transizionContainer"
+                  class="transizion-container"
+                ></div>
+
+                <button
+                  id="registrationButton"
+                  class="registration-button"
+                  type="submit"
+                >
+                  Зарегестрироваться
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

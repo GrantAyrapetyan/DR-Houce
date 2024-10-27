@@ -1,0 +1,178 @@
+html,
+body {
+  background-color: #ccd0cf;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.warning-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  position: absolute;
+  z-index: 9999;
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 200px;
+  height: 40px;
+  font-size: 14px;  
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #767676;
+  color: #ffffff;
+  display: none;
+}
+.authorization-field {
+  width: auto;
+  height: auto;
+  min-width: 200px;
+  min-height: 350px;
+  border-radius: 30px;
+  background-color: #8d989c;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.control-buttons {
+  display: flex;
+  list-style-type: none;
+  justify-content: left;
+  font-size: 14px;
+  padding: 0;
+  margin: 20px 30px;
+  gap: 40px;
+  color: #d3d3d3;
+  cursor: pointer;
+}
+
+#registration,
+#authorization {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #d3d3d3;
+}
+#authorization {
+  color: #ffffff;
+}
+
+form {
+  position: relative;
+}
+#registrationFields {
+  display: none;
+}
+
+#registrationFields input {
+  background: none;
+  height: 15px;
+}
+.userFields,
+.identification-fields,
+.loginPassword-fields {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px 20px 20px;
+  gap: 10px;
+  border-radius: 30px;
+  background-color: white;
+}
+.line-choice {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 40px;
+  height: 5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #4a5b6b;
+  transition: transform 0.3s ease;
+}
+
+.identification-fields,
+.loginPassword-fields {
+  gap: 20px;
+}
+
+label {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+input {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ebebeb;
+  box-sizing: border-box;
+  padding: 10px;
+}
+input:focus {
+  outline: none;
+}
+
+.authorization-button,
+.transition-button,
+.registration-button {
+  background-color: #4a5b6b;
+  border: 1px solid #4a5b6b;
+  color: #ffffff;
+  height: 40px;
+  border-radius: 15px;
+  margin-top: 50px;
+  transition: 0.7s;
+  box-shadow: -5px 5px 10px rgb(0, 0, 0, 0.1);
+}
+.authorization-button:hover,
+.transition-button:hover,
+.registration-button:hover {
+  background-color: #ffffff;
+  color: #4a5b6b;
+  border: 1px solid #4a5b6b;
+}
+
+.line {
+  border-bottom: 1px solid #dddddd;
+  margin-top: -15px;
+}
+
+.transizion-container {
+  position: relative;
+  display: inline-block;
+  margin-inline: auto;
+  width: 45px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #767676;
+}
+.transizion-container::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  left: 12px;
+  top: 30%;
+  border-radius: 20px;
+  background-color: var(--before-color, #ffffff);
+}
+
+.transizion-container::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  right: 12px;
+  top: 30%;
+  border-radius: 20px;
+  background-color: var(--after-color, #d9d9d9);
+}
+#loginPasswordFields {
+  display: none;
+}
