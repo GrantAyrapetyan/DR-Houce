@@ -9,7 +9,7 @@ const loginPasswordFields = document.getElementById("loginPasswordFields");
 const transitionContainer = document.getElementById("transizionContainer");
 const registrationButton = document.getElementById("registrationButton");
 const authorizationButton = document.getElementById("authorizationButton");
-const password = document.getElementById("passwordNew");
+const passwordNew = document.getElementById("passwordNew");
 const passwordNewAgain = document.getElementById("passwordNewAgain");
 const messageError = document.querySelector('.warning-field');
 
@@ -47,6 +47,7 @@ const userVerification = (inputs) => {
 };
 
 authorizationButton.addEventListener("click", () => {
+  event.preventDefault();
   // отправка на проверку пользователя
   let emptyCount = emptyFields(authorizationFields);
 
@@ -115,18 +116,19 @@ buttonNext.addEventListener("click", () => {
 });
 
 registrationButton.addEventListener("click", () => {
+  event.preventDefault();
   // добавления нового пользователя
   let emptyCount = emptyFields(loginPasswordFields);
   const inputs = registrationFields.querySelectorAll("input");
-  if (emptyCount === 0 && password.value === passwordNewAgain.value) {
+  if (emptyCount === 0 && passwordNew.value === passwordNewAgain.value) {
     userVerification(inputs);
     console.log(user);
     sendingServer(user);
 
     password.style.color = "black";
     passwordNewAgain.style.color = "black";
-  } else if (emptyCount === 0 && password.value !== passwordNewAgain.value) {
-    password.style.color = "red";
+  } else if (emptyCount === 0 && passwordNew.value !== passwordNewAgain.value) {
+    passwordNew.style.color = "red";
     passwordNewAgain.style.color = "red";
   } else {
     messageError.style.display = 'flex';
